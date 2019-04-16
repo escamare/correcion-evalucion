@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,700,800,800i,900|Overpass:400,400i,600,600i,700,700i,900');
+
+
+body{
+   font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+}
+
+h1{
+  font-family:'Montserrat', sans-serif;
+  font-weight: 700;
+    color: #17A589;
+}
+
+nav{
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+
+.verde {
+    background-color:#1ABC9C;
+    color:white;
+}
+
+.bg-boscoso { 
+background: linear-gradient(to bottom, rgba(23, 165, 137, .9), rgba(11, 83, 69)), url("https://storage.needpix.com/rsynced_images/tree-2138872_1280.jpg");
+background-size: cover;
+}
+
+
+
+.bg-light {
+  background-color: #1ABC9C !important;
+}
+
+.bg-dark {
+  background-color: #17A589  !important;
+}
+
+p{
+   font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+}
+
+a{
+   font-family: 'Overpass', sans-serif;
+  font-weight: 700; 
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: darkolivegreen;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.card .card-img-top {
+    filter:grayscale(0.8)   
+}
+
+.card:hover .card-img-top{
+    filter:grayscale(0);
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
