@@ -130,6 +130,7 @@ Este documento se compuso con harto copy/paste
             var greenIcon = new LeafIcon({iconUrl: 'marker-icon-2x-green.png'});
 
             
+            
             // Después puedes explorar el arreglo en la variable de nombre data con un ciclo for
             for (var x = 0; x < data.length; x++) {
                 // con esto se agregan puntos en el plano por cada dato
@@ -141,7 +142,7 @@ Este documento se compuso con harto copy/paste
                         var tercero =   "<img src=\"" + data[x].foto + "\" class=\"card-img-top\">";
                         var cuarto  =   "<div class=\"card-body\">";
                             var quinto  =   "<h5 class=\"card-title\">" + data[x].nombre + "</h5>"
-                            var sexto   =   "<p class=\"card-text\"> Tipología</p>" + data[x].tipologia + "</p>";
+                            var sexto   =   "<h6 id=\"sexto\" class=\"card-text\"> Tipología</h6>" + data[x].tipologia + "</h6>";
                             var septimo   =   "<p class=\"card-text\">" + data[x].ha + " hectáreas</p>";
                             var octavo =   "<a href=\"" + data[x].url + "\" target=\"_blank\" class=\"btn bg-dark link btn-sm text-light\">Monumentos</a>";
                     var noveno  =   "</div>";
