@@ -42,6 +42,11 @@ p{
   font-weight: 400;
 }
 
+#sexto{
+    color: #17a589;
+}
+
+
 a{
    font-family: 'Overpass', sans-serif;
   font-weight: 700; 
@@ -94,6 +99,8 @@ header .overlay {
 .card:hover .card-img-top{
     filter:grayscale(0);
 }
+
+      
 
 @media (pointer: coarse) and (hover: none) {
   header {
