@@ -29,6 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#detalles">Detalles</a>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#novedad">Novedad</a>
+                    </li>
             </ul>
         </div>
       </div>
@@ -80,12 +83,14 @@
             </div>
         </div>
     </section>
+ <section id="novedad">
+       </section>
 
     <footer>
         <div class="container-fluid">
             <div class="row small py-2 bg-light text-light">
                 <div class="col-sm-6 py-3">Seminario de Gráfica Computacional I</div>
-                <div class="col-sm-6 py-3 text-md-right">Estefanía Maturana © 2019</div>
+                <div class="col-sm-6 py-3 text-md-right">Estefanía Maturana - Camila Uribe © 2019</div>
             </div>
         </div>
     </footer>
@@ -201,7 +206,40 @@
         } // aquí cerramos la función que trabaja con el select
         
     </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script>
+        var regiones;
+        
+        
+        function preload(){
+            regiones = loadJSON("https://api.myjson.com/bins/epxog");
+        }
 
+        function setup() {
+            createCanvas(windowWidth,600).parent("novedad");
+            background(300);
+            fill('rgb(11,83,69)');
+            noStroke();
+            textAlign(CENTER);
+            rectMode(CENTER);
+            textSize(16);
+            textFont('Overpass');
+            textStyle(BOLD);
+            text('Regiones con mayor cantidad de Santuarios Naturales', width/2, 100);
+           regiones.santuarios.forEach(function(regiones,i){
+                ellipse((width/11)*(1+i), height/2, regiones.cantidad*5, regiones.cantidad*5);
+                text(regiones.region, (width/11)*(1+i), (height/2)+100, 75, 75);
+            });
+        }
+    
+        function draw() {
+            // hay casos en lo que puedes dibujar en el setup
+        }     
+   
+     </script>
+     
+     
 </body>
 
 </html>
